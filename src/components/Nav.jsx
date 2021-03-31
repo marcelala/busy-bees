@@ -1,2 +1,0 @@
-/**my parcel, 
- * parcel centers  */
