@@ -1,6 +1,5 @@
-
-
-export default function Card(data) {
+export default function Card({item}) {
+    const{sender, status, parcel_id, last_updated}= item;
     return(
         <article className="card">
             <h3>≤{parcel_id}</h3>
@@ -8,12 +7,8 @@ export default function Card(data) {
             <h6>{last_updated}</h6>
             <h4>{sender}</h4>
             <Button>View details</Button>
-
         </article>
     )
-
-
-    
 }
 /**
  * sender
