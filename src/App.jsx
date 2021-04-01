@@ -9,7 +9,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 //components
 import Tracker from './components/Tracker';
-// import Card from './components/Card';
+import Card from './components/Card';
 // import Map from './components/Map';
 // import ProgressBar from './components/Progressbar';
 
@@ -20,6 +20,7 @@ function App() {
 
   const [status,setStatus]= useState(0);//0 loading data, 1 error getting data, 2 data loaded
   const[data, setData] = useState([]);//array to hold the parcel list
+  
   const fetchData= async () =>{
     const fetchedData = await fetch(API_URL);
     const data = await fetchedData.json();
@@ -31,7 +32,9 @@ function App() {
       // .then (onFetchSuccess)
       .catch(onFetchFail);
   },[]);
-
+  const Cards= data.map((item) => (
+    <Card key = {item.parcel_id} data= {item}/>
+     ));
   
   // useEffect(()=> {
   //   fetch(API_URL)
@@ -62,10 +65,7 @@ function App() {
       
       <Tracker/>
       /* cards */
-
-      {data.map(item => (
-        <h1 key = {item.parcel_id}>{item.sender}</h1>
-        ))}
+      <div>{Cards}</div>
       {/* < Route path="./details" component={Details}/> */}
 
     </div>
