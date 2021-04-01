@@ -4,12 +4,19 @@ import Button from '@material-ui/core/Button';
 export default function Card({data}) {
     return(
         <article className="card">
-            <h3>≤{data.parcel_id}</h3>
-            <h2>{data.status}</h2>
-            <h6>{data.last_updated}</h6>
-            <h4>{data.sender}</h4>
+        <div className="card-container">
+            <div className="parcel-id">Parcel ID {data.parcel_id}</div>
+            <div className="sender">{data.sender}</div>
+            <div className="status">{data.status}</div>
+            <div className="last-updated">Last updated: {data.last_updated}</div>
+            <div className="location_name">Pick-up location: {data.location_name}</div>
+            {/* <div className="location_latitude">{data.location_coordinate_latitude}</div>
+            <div className="longitude">{data.location_coordinate_longitude}</div> */}
             {/* ProgressBar */}
-            <Link to={'/details/${data.parcel_id}'}> <Button> View details</Button></Link>
+            <div className="view-details">
+            {/* <Link to={'/details/${data.parcel_id}'}> <Button> View details</Button></Link> */}
+            </div>
+        </div>
         </article>
     )
 }

@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react'
 import './styles/App.css';
 import 'fontsource-roboto';
-// import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
-import Input from '@material-ui/core/Input';
+import Grid from '@material-ui/core/Grid';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 //components
 import Tracker from './components/Tracker';
 import Card from './components/Card';
+
 // import Map from './components/Map';
 // import ProgressBar from './components/Progressbar';
 
 
 
 function App() {
+  //constant
   const API_URL = 'https://my.api.mockaroo.com/orders.json?key=e49e6840';
-
+//state
   const [status,setStatus]= useState(0);//0 loading data, 1 error getting data, 2 data loaded
   const[data, setData] = useState([]);//array to hold the parcel list
   
@@ -27,14 +28,17 @@ function App() {
     console.log(data);
     setData(data);
   }
+
+  //methods
   useEffect(()=> {
     fetchData()
       // .then (onFetchSuccess)
       .catch(onFetchFail);
   },[]);
+  
   const Cards= data.map((item) => (
     <Card key = {item.parcel_id} data= {item}/>
-     ));
+  ));
   
   // useEffect(()=> {
   //   fetch(API_URL)
@@ -62,12 +66,13 @@ function App() {
       {status===0 && <p>Loading</p>}
       {status===1 && <p>Error</p>}
       {status===2 && <p>Data loaded</p>}
-      
-      <Tracker/>
-      /* cards */
-      <div>{Cards}</div>
+      <Container><Tracker/></Container>
+      <Container>
+      <Grid container spacing = {2}>
+      <div className="grid">{Cards}</div>
       {/* < Route path="./details" component={Details}/> */}
-
+      </Grid>
+      </Container>
     </div>
     </Router>
   );

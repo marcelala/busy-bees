@@ -1,12 +1,10 @@
-export default function Main({data}){
+export default function Main(){
 
-    const parcelsArray = data.map((item)=> <li> key{item.parcel_id>{item.sender}</li>});
 
     return(
-        <div>
+        <div className="container">
             <h1>Your parcels</h1>
 
-           <span> parcelsArray</span>
         
         
         
