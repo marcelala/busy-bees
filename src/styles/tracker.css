@@ -5,24 +5,26 @@ left: 0%;
 right: 0%;
 top: 0%;
 bottom: 0%;
-height: 4rem;
+height: 15rem;
 width:  45rem;
 padding: 6rem;
+background: linear-gradient(180deg, #FFD64D 91.08%, #FFCE00 100%);
+border-radius   : 16px 16px 16px 16px;
 margin-bottom: 2rem;
+justify-content: center;
 }
 
 .tracker-bar{
-background: linear-gradient(180deg, #FFD64D 91.08%, #FFCE00 100%);
-border-radius: 0px 0px 16px 16px;
+margin-bottom: 2rem;
+
 }
 
 .heading{
-    position: absolute;
-    width: 155px;
-    height: 36px;
-    left: 24px;
-    bottom: 306px;
+    position: relative;
+    display: flex;
     font-family: 'Roboto';
+    justify-content: center;
+    display: flex;
 }
 
 
@@ -30,6 +32,32 @@ h1{
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    line-height: 36px;
+    line-height: 15px;
     color: #111111;
+}
+
+Button.tracker-button{
+    position: absolute;
+    background: #111111;
+    border-radius: 2px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    align-self: auto;
+    margin: 2rem;
+    line-height: 24px;
+    height: 24px;
+    left: 25%;
+    right: 25%;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.input{
+margin-bottom: 1rem;
+
 }

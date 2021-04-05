@@ -10,11 +10,8 @@ import "./styles/App.css";
 
 //components
 import Tracker from "./components/Tracker";
-import Card from "./components/Card";
 import Header from "./components/Header";
 
-// import Map from './components/Map';
-// import ProgressBar from './components/Progressbar';
 
 import Home from "./screens/Home";
 import TrackedParcels from "./components/TrackedParcels";

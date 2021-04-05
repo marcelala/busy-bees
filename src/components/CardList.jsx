@@ -6,13 +6,12 @@ import { dataState } from "../state/dataState";
 //component
 import Card from "./Card";
 
-export default function TrackedParcels() {
+export default function CardList() {
   //global state
   const [data, _] = useRecoilState(dataState);
+  const allCards= data.map((parcel) => <Card key={parcel.parcel_id} parcel={parcel} />);
   //array of tracked parcels
-  return data.parcels
-    .filter((parcel) => {
-      return data.trackedParcelIds.includes(parcel.parcel_id);
-    })
-    .map((parcel) => <Card key={parcel.parcel_id} parcel={parcel} />);
-}
+
+      return(
+      allCards
+      )}

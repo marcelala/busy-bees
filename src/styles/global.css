@@ -1,6 +1,16 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+
+Container{
+    font-family: 'Roboto', sans-serif;
+}
+
+.App{
+    border-color: #FFD64D;
+}
+
+
 .body-text-1{
     height: 18px;
     left: 4.89%;
@@ -13,4 +23,13 @@
     color: #111111;
 }
 
+.logo-container{
+    display: flex;
+    justify-content: center;
+}
 
+.logo{
+    position: relative;
+    width: 20rem;
+    height: 100%;
+}
