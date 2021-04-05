@@ -30,7 +30,10 @@ export default function Home() {
   }, [setData, setStatus]);
 
   function onFetchSuccess(json) {
-    setData(json);
+    setData({
+      parcels: json,
+      trackedParcelIds: data.trackedParcelIds,
+    });
     setStatus(2);
   }
 
@@ -45,9 +48,6 @@ export default function Home() {
       {status === 1 && <p>Error</p>}
       {status === 2 && <p>Data loaded</p>}
       {/*<div className="grid">{Cards}</div>*/}
-      {data.map((item) => (
-        <Card key={item.parcel_id} data={item} />
-      ))}
     </div>
   );
 }
