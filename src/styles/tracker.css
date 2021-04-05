@@ -1,12 +1,12 @@
 /* Rectangle */
 .rectangle{
-position: absolute;
+position: relative;
 left: 0%;
 right: 0%;
 top: 0%;
 bottom: 0%;
-height: 400rem;
-width: 375rem;
+height: 4rem;
+width:  45rem;
 padding: 6rem;
 margin-bottom: 2rem;
 }

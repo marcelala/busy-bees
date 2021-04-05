@@ -2,6 +2,10 @@ import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
 export default function Card({data}) {
+    //constants
+    // const routerID= match.params.parcel_id;
+    // const parcel= fetchedData.find( (item) => item.parcel_id === routerID);
+
     return(
         <article className="card">
         <div className="card-container">

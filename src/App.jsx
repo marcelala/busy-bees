@@ -1,19 +1,20 @@
+// npm files
 import React, { useState, useEffect } from 'react'
-import './styles/App.css';
-import 'fontsource-roboto';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import 'fontsource-roboto';
+
+
+//project files
+import './styles/App.css';
 
 //components
 import Tracker from './components/Tracker';
 import Card from './components/Card';
-
 // import Map from './components/Map';
 // import ProgressBar from './components/Progressbar';
-
-
 
 function App() {
   //constant
@@ -32,26 +33,14 @@ function App() {
   //methods
   useEffect(()=> {
     fetchData()
-      // .then (onFetchSuccess)
+      .then (setStatus(2))
       .catch(onFetchFail);
-  },[]);
+  },[setData,setStatus]);
   
   const Cards= data.map((item) => (
     <Card key = {item.parcel_id} data= {item}/>
   ));
   
-  // useEffect(()=> {
-  //   fetch(API_URL)
-  //     .then((response) => response.json())
-  //     .then (onFetchSuccess)
-  //     .catch(onFetchFail);
-  // },[setData, setStatus])
-
-  // function onFetchSuccess(json){
-  //   // setData(json);
-  //   setStatus(2);
-  //   console.log(json);
-  // }
   function onFetchFail(error){
     console.error('we have a problem loading the parcels',error);
     setStatus(1);
