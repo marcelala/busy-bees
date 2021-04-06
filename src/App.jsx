@@ -25,7 +25,7 @@ export default function App() {
           <Container>
             <Header />
             <div className="tracker"><Tracker /></div>
-            <Grid className="grid-container"><TrackedParcels/></Grid>
+            <div className="grid-container"><TrackedParcels/></div>
             {/* <Grid className="grid-container"><CardList/></Grid> */}
           </Container>
           <Switch>

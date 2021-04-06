@@ -8,50 +8,54 @@ background: #FFFFFF;
 border: 1px solid #F8F8F8;
 box-shadow: 0px 0px 10px rgba(230, 230, 230, 0.5);
 border-radius: 4px;
-padding: 3rem;
-margin: 2rem 2rem;
+padding: 2rem;
+margin: 1rem 1rem;
+max-width: fit-content;
+width: 80%;
 display: grid;
-grid-template-columns: 100px 100px 100px 30px;
+grid-template-columns: 8rem 100px 40px 40px 20px;
 grid-template-rows: 50px auto auto 10px; 
-column-gap: 10px;
+column-gap: 15px;
 row-gap: 15px;
 font-family: 'Roboto', sans-serif;
 }
 
-.parcel-id{
-    grid-row: span 4;
+.sender{
+    grid-row: span 5;
     align-self: center;
     align-content: center;
     font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
 }
 
-.sender{
-grid-column: span 2;
+.parcel-id{
+grid-column: span 3;
 grid-row: span 2;
 align-self: center;
 align-content: center;
 }
 
 .status{
-    height: 18px;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;
-    line-height: 18px;
-    grid-column: span 3;
-    color: #111111;
+    grid-column: span 4;
+    color: #FFCE00;
     align-self: center;
-    align-content: center;
     font-family: 'Roboto', sans-serif;
+    padding-bottom: 0.3rem;
     }
 
 .last-updated{
-height: 15px;
 font-style: normal;
 font-weight: 500;
-font-size: 10px;
+font-size: 9px;
 line-height: 15px;
 color: rgba(51, 51, 51, 0.5);
+grid-column: span 4;
+justify-self: end;
+grid-column: span 5;
 }
 
 .view-details{
@@ -63,26 +67,23 @@ color: #111111;
 }
 
 .eta{
-    height: 15px;
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
-    line-height: 15px;
     color: rgba(51, 51, 51, 0.5);
     font-family: 'Roboto', sans-serif;
+    margin-top: .8rem;
+    grid-column: span 4;
+    justify-self: end;
 }
 .location-name{
-    height: 18px;
-    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    grid-column: span 3;
     font-weight: bold;
     font-size: 1rem;
-    line-height: 18px;
-    font-family: 'Roboto', sans-serif;
+
 }
 
 .card-container Button{
     justify-content: center;
-    align-self:flex-end;
-    padding: 0;
-    margin: 0;
 }

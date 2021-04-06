@@ -29,3 +29,11 @@ Container{
     width: 15rem;
     height: 100%;
 }
+
+.grid-container{
+    display: grid;
+    justify-items: space-around;
+    width: 80%;
+    row-gap: 1rem;
+    column-gap: 2rem;
+}
