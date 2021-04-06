@@ -5,6 +5,9 @@ import { useState } from "react";
 import { useRecoilState } from "recoil";
 //global state
 import { dataState } from "../state/dataState";
+//components
+import CardList from "../components/CardList";
+
 
 export default function Tracker() {
   //state
@@ -24,15 +27,21 @@ export default function Tracker() {
     }
 }
 
+function viewAllParcels(){
+
+  return <CardList/>
+}
+
+
 return (
-    <Container className= "rectangle">
+    <div className= "rectangle">
       <div className="heading">
-          <h1>Where's my parcel?</h1>
+          <h1>Where are my parcels?</h1>
         </div>
       <div className="tracker-bar">
         <form onSubmit={trackParcel}>
           <label>
-            <div className="body-text-2">Enter parcel number:</div>
+            <div className="body-text-2">Enter a parcel number:</div>
             <Container className="input-container">
             <Input
               placeholder=" tracking number"
@@ -44,8 +53,11 @@ return (
             <Button className="tracker-button" type="submit">
               Track parcel
             </Button>
+            <Button className="view-all" onClick={viewAllParcels}> 
+              View all parcels 
+            </Button>
           </label>
         </form>
       </div>
-    </Container>
+    </div>
 );}

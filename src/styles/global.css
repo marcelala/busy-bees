@@ -13,13 +13,9 @@ Container{
 
 .body-text-1{
     height: 18px;
-    left: 4.89%;
-    right: 50.76%;
-    top: calc(50% - 18px/2 - 62px);
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
     color: #111111;
 }
 
@@ -30,6 +26,6 @@ Container{
 
 .logo{
     position: relative;
-    width: 20rem;
+    width: 15rem;
     height: 100%;
 }

@@ -1,43 +1,47 @@
 /* Rectangle */
 .rectangle{
-position: relative;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-height: 15rem;
-width:  45rem;
-padding: 6rem;
+display: grid;
+height: 100%;
+width:  80%;
+padding: 2rem;
 background: linear-gradient(180deg, #FFD64D 91.08%, #FFCE00 100%);
-border-radius   : 16px 16px 16px 16px;
-margin-bottom: 2rem;
-justify-content: center;
-}
-
-.tracker-bar{
-margin-bottom: 2rem;
-
+border-radius: 16px 16px 16px 16px;
+grid-template-columns: 200px auto;
+grid-auto-rows: minmax(15px,auto);
+justify-items: center;
 }
 
 .heading{
-    position: relative;
-    display: flex;
-    font-family: 'Roboto';
-    justify-content: center;
-    display: flex;
+    grid-column: span 2;
 }
 
-
-h1{   
+h1{
+    font-family: 'Roboto';   
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    line-height: 15px;
     color: #111111;
+    justify-content: center;
+    align-content: center;
+    top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.tracker-bar{
+    grid-column: span 2;
+    justify-content: center;
+    align-content: center;
+
+}
+
+form{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
 }
 
 Button.tracker-button{
-    position: absolute;
+    position: relative;
     background: #111111;
     border-radius: 2px;
     color: white;
@@ -46,11 +50,26 @@ Button.tracker-button{
     font-size: 12px;
     text-align: center;
     align-self: auto;
-    margin: 2rem;
+    margin: .5rem;
     line-height: 24px;
-    height: 24px;
-    left: 25%;
-    right: 25%;
+    height: 4vh;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+Button.view-all{
+    position: relative;
+    background: #111111;
+    border-radius: 2px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    margin: .5rem;
+    line-height: 24px;
+    height: 4vh;
     padding-top: 1.3rem;
     padding-bottom: 1.3rem;
     padding-left: 1rem;
@@ -58,6 +77,6 @@ Button.tracker-button{
 }
 
 .input{
-margin-bottom: 1rem;
-
+margin-top: 2rem;
+margin-bottom: 2rem;
 }

@@ -5,15 +5,13 @@ import { Input, Button, Container } from "@material-ui/core";
 //state
 import { dataState } from "../state/dataState";
 import Card from "../components/Card"
-import CardList from "../components/CardList";
-
 export default function Home() {
   //global state
   const [data, setData] = useRecoilState(dataState); //array to hold the parcel list
   //constants
   const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840";
   console.log(data);
-  const allParcels= data.parcels.map((parcel) => <Card key={parcel.parcel_id} parcel={parcel} />);
+  let allParcels= data.parcels.map((parcel) => <Card key={parcel.parcel_id} parcel={parcel} />);
 
   //state
   const [status, setStatus] = useState(0); //0 loading data, 1 error getting data, 2 data loaded
@@ -48,8 +46,5 @@ export default function Home() {
       {status === 0 && <p>Loading</p>}
       {status === 1 && <p>Error</p>}
       {status === 2 }
-        <Button className="tracker-button" onClick={viewAllParcels}> 
-        View all parcels 
-        </Button>
     </div>
 );}

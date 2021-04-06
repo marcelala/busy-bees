@@ -1,6 +1,5 @@
 import { useRecoilState } from "recoil";
 import { useState, useEffect } from "react";
-import Grid from "@material-ui/core/Grid";
 //state
 import { dataState } from "../state/dataState";
 //component

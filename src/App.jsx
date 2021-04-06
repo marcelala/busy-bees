@@ -1,6 +1,7 @@
 // npm files
 import React, { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "fontsource-roboto";
 import { RecoilRoot } from "recoil";
@@ -15,6 +16,7 @@ import Header from "./components/Header";
 
 import Home from "./screens/Home";
 import TrackedParcels from "./components/TrackedParcels";
+import CardList from "./components/CardList";
 
 export default function App() {
   return (
@@ -24,7 +26,8 @@ export default function App() {
           <Container>
             <Header />
             <Tracker />
-            <TrackedParcels />
+            <Grid className="grid-container"><TrackedParcels/></Grid>
+            <Grid className="grid-container"><CardList/></Grid>
           </Container>
           <Switch>
             <Route path="/" exact component={Home} />
