@@ -1,33 +1,36 @@
-# Busy Bees Tracking App
-    This app allows the user to check up on the tracking status of parcels added to the tracking list.
 
-    This project is a student project for KTH's Software Development Academy.
+![logo](src/assets/logo.png)
+# Busy Bees Tracking App
+
+This app allows the user to add and remove parcels fetched from RESTful API to a tracking list, displaying their status and details. This project is a student project for KTH's Software Development Academy.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Set up
 
 In the project directory, you can run:
 
-### `npm start`
+        npm install
 
-Runs the app in the development mode.\
+Which installs the projects dependencies. After that running
+
+        npm start
+
+the app runs in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usage
+At the home page it is possible to add the parcel tracking numbers to the list of parcels to be tracked. After that the details of each parcel will be displayed.
+When the user decides tracking is no longer necessary the parcels can be removed from the list.
 
-### `npm test`
+![Screenshot](src/assets/Screenshot%20.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dependencies
+- React
+- React router-DOM
+- Recoil
+- Material UI
+- Fontsource Roboto
+  
+## Acknowledgments
+Thanks to Eduardo Alvarez and classmates at SDA.

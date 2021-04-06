@@ -1,7 +1,6 @@
 // npm files
 import React, { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "fontsource-roboto";
 import { RecoilRoot } from "recoil";
