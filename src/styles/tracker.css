@@ -16,6 +16,7 @@ grid-auto-rows: minmax(15px,auto);
 justify-items: center;
 justify-content: center;
 align-content: center;
+margin-bottom: 3rem;
 }
 
 .heading{

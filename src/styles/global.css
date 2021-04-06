@@ -1,39 +1,59 @@
-*{
-    font-family: 'Roboto', sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 
-Container{
-    font-family: 'Roboto', sans-serif;
+Container {
+  font-family: "Roboto", sans-serif;
 }
 
-.App{
-    border-color: #FFD64D;
+.App {
+  border-color: #ffd64d;
+}
+
+.body-text-1 {
+  height: 18px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #111111;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  position: relative;
+  width: 15rem;
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  align-self: center;
+  justify-items: center;
+  width: 100%;
+  row-gap: 1rem;
+  column-gap: .5rem;
+  grid-template-columns: auto auto auto;
+}
+
+@media only screen and (max-width: 1052px) {
+    .grid-container {
+      grid-template-columns: auto auto;
+      align-self: center;
+      justify-items: center;
+    }
+  }
+
+
+@media only screen and (max-width: 680px) {
+  .grid-container {
+    grid-template-columns: auto;
+    align-self: center;
+    justify-items: center;
+  }
 }
 
 
-.body-text-1{
-    height: 18px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    color: #111111;
-}
-
-.logo-container{
-    display: flex;
-    justify-content: center;
-}
-
-.logo{
-    position: relative;
-    width: 15rem;
-    height: 100%;
-}
-
-.grid-container{
-    display: grid;
-    justify-items: space-around;
-    width: 80%;
-    row-gap: 1rem;
-    column-gap: 2rem;
-}

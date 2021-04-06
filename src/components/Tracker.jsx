@@ -42,10 +42,10 @@ return (
       <div className="tracker-bar">
         <form onSubmit={trackParcel}>
           <label>
-            <div className="body-text-2">Enter a parcel number:</div>
+            {/* <div className="body-text-2">Enter a parcel number:</div> */}
             <Container className="input-container">
             <Input
-              placeholder=" tracking number"
+              placeholder=" Enter a tracking number..."
               className="input"
               value={query}
               onChange={(event) => setQuery(event.target.value)}

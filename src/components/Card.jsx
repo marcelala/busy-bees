@@ -25,11 +25,9 @@ export default function Card({ parcel }) {
   return (
     <article className="card">
       <div className="card-container">
-        <div className="sender">Sender: {parcel.sender}</div>
         <div className="parcel-id">Parcel ID {parcel.parcel_id}</div>
-        <div className="delete">
         <Button onClick={stopTracking}> x </Button>
-        </div>
+        <div className="sender">From <br/> {parcel.sender}</div>
         <div className="status">{parcel.status}</div>
         <div className="location-name">Location: {parcel.location_name}</div>
         <div className="eta">Scheduled delivery: {parcel.eta}</div>
