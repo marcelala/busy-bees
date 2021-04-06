@@ -16,7 +16,6 @@ import Header from "./components/Header";
 
 import Home from "./screens/Home";
 import TrackedParcels from "./components/TrackedParcels";
-import CardList from "./components/CardList";
 
 export default function App() {
   return (
@@ -25,9 +24,9 @@ export default function App() {
         <Router>
           <Container>
             <Header />
-            <Tracker />
+            <div className="tracker"><Tracker /></div>
             <Grid className="grid-container"><TrackedParcels/></Grid>
-            <Grid className="grid-container"><CardList/></Grid>
+            {/* <Grid className="grid-container"><CardList/></Grid> */}
           </Container>
           <Switch>
             <Route path="/" exact component={Home} />

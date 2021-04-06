@@ -5,8 +5,7 @@ import { useState } from "react";
 import { useRecoilState } from "recoil";
 //global state
 import { dataState } from "../state/dataState";
-//components
-import CardList from "../components/CardList";
+
 
 
 export default function Tracker() {
@@ -28,8 +27,10 @@ export default function Tracker() {
 }
 
 function viewAllParcels(){
-
-  return <CardList/>
+  let allParcelsIds = data.parcels.map(parcel => parcel.parcel_id);
+  setData({ parcels:data.parcels,
+            trackedParcelIds: allParcelsIds
+  })
 }
 
 
