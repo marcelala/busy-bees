@@ -88,4 +88,5 @@ margin-right: 1.5rem;
     justify-content: end;
     right: 1.5rem;
     grid-column: span 2;
+    justify-self: right;
 }
